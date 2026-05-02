@@ -1,71 +1,181 @@
-청년 친화도시 성남 · 2026
-성남시 청년정책 시행계획 요약
-주관: 성남시 청년청소년과 · 2026년 3월 수립
-101개
-총 사업 수
-35,953백만원
-총 예산
-5개 분야
-정책 영역
-21개 부서
-추진 부서
-247,411명
-성남시 청년인구
-개요
-2025 성과
-추진방향
-일자리
-주거
-교육
-복지·문화
-참여·권리
-전체 개요
-OVERVIEW
-247,411
-성남시 청년인구 (총인구의 27.3%)
-35,953
-2026년 총 예산 (단위: 백만원)
-101
-총 사업 수 (전년 대비 +12건)
-+2,029
-전년 대비 증액 (단위: 백만원)
-청년 인구 분포 (2026.1 기준)
-연령대
-인구수
-구성비
-19~24세
-50,665명
-5.59%
-25~29세
-62,303명
-6.87%
-30~34세
-70,839명
-7.81%
-35~39세
-63,604명
-7.01%
-합계
-247,411명
-27.28%
-분야별 예산
-일자리
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>성남시 청년정책</title>
 
-12,353백만원
-주거
+<style>
+:root {
+  --bg:#0f0f0f; --surface:#181818; --border:#2a2a2a;
+  --accent:#c8f542; --accent2:#42a4f5;
+  --text:#e8e8e8; --muted:#888;
+}
 
-7,317백만원
-교육
+*{box-sizing:border-box;margin:0;padding:0}
 
-9,083백만원
-복지·문화
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-7,005백만원
-참여·권리
+nav{
+  display:flex;
+  overflow:auto;
+  border-bottom:1px solid var(--border);
+}
+nav button{
+  flex:none;
+  padding:14px;
+  border:none;
+  background:none;
+  color:var(--muted);
+}
+nav button.active{
+  color:var(--accent);
+  border-bottom:2px solid var(--accent);
+}
 
-195백만원
-정책 비전
-청년친화도시 성남 — 청년 취·창업 역량강화 + 청년 삶의 질 향상을 위한 지원을 두 축으로 5개 분야 101개 사업 추진
-추진 근거
-「청년기본법」제9조 / 「성남시 청년 기본 조례」제5조에 의거, 연도별 시행계획 수립·시행
-2026년 성남시 청년정책 시행계획 요약 · 청년청소년과 · 2026.03
+/* 검색 */
+.search{
+  display:flex;
+  gap:8px;
+  padding:10px;
+  border-bottom:1px solid var(--border);
+}
+.search input{
+  flex:1;
+  padding:10px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  color:white;
+  border-radius:6px;
+}
+
+/* 섹션 */
+.section{display:none;padding:15px}
+.section.active{display:block}
+
+/* 카드 */
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:8px;
+}
+
+/* 아코디언 */
+details{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
+  margin-bottom:10px;
+}
+summary{
+  padding:15px;
+  cursor:pointer;
+  font-weight:bold;
+}
+details[open] summary{
+  color:var(--accent);
+}
+.policy-body{
+  padding:15px;
+  border-top:1px solid var(--border);
+}
+
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<nav>
+<button class="active" onclick="show('jobs', this)">일자리</button>
+<button onclick="show('housing', this)">주거</button>
+</nav>
+
+<div class="search">
+<input id="search" placeholder="검색 ex) 월세, 창업, 청년청소년과">
+</div>
+
+<!-- 일자리 -->
+<section id="jobs" class="section active">
+
+<details>
+<summary>미취업 청년 지원사업 (ALL-Pass)</summary>
+<div class="policy-body">
+자격증 비용 지원<br>
+대상: 미취업 청년<br>
+지원: 최대 100만원<br>
+<a href="https://dept.seongnam.go.kr/youth/" target="_blank">바로가기</a>
+</div>
+</details>
+
+<details>
+<summary>청년희망인턴</summary>
+<div class="policy-body">
+공공기관 인턴 제공<br>
+<a href="https://www.seongnam.go.kr/" target="_blank">바로가기</a>
+</div>
+</details>
+
+<details>
+<summary>청년 창업 지원</summary>
+<div class="policy-body">
+창업 지원 프로그램<br>
+<a href="https://dept.seongnam.go.kr/youth/" target="_blank">바로가기</a>
+</div>
+</details>
+
+</section>
+
+<!-- 주거 -->
+<section id="housing" class="section">
+
+<details>
+<summary>청년월세 지원</summary>
+<div class="policy-body">
+월세 지원 정책<br>
+<a href="https://www.bokjiro.go.kr/" target="_blank">바로가기</a>
+</div>
+</details>
+
+<details>
+<summary>전월세 지원</summary>
+<div class="policy-body">
+보증금 및 이사비 지원<br>
+<a href="https://dept.seongnam.go.kr/youth/" target="_blank">바로가기</a>
+</div>
+</details>
+
+</section>
+
+<script>
+function show(id, btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'))
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'))
+  document.getElementById(id).classList.add('active')
+  btn.classList.add('active')
+}
+
+document.getElementById('search').addEventListener('input', function(){
+  let k = this.value.toLowerCase()
+
+  document.querySelectorAll('details').forEach(d=>{
+    let t = d.innerText.toLowerCase()
+
+    if(t.includes(k)){
+      d.classList.remove('hidden')
+      if(k) d.open = true
+    }else{
+      d.classList.add('hidden')
+    }
+  })
+})
+</script>
+
+</body>
+</html>
